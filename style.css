@@ -1,4 +1,4 @@
-/* Reset some default styles */
+/* Reset & Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +25,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #0a2540;
 }
 
@@ -47,21 +48,26 @@ nav a {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
 }
 
 .cta {
   background: #ff7f50;
   color: white;
-  padding: 0.8rem 1.6rem;
+  padding: 0.9rem 1.8rem;
   border-radius: 5px;
   font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #ff6330;
 }
 
 /* Services Section */
@@ -71,20 +77,29 @@ nav a {
   text-align: center;
 }
 
+.services h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
 .service-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
 .service {
   background: #f1f5f9;
   padding: 1.5rem;
-  border-radius: 8px;
+  border-radius: 10px;
   width: 260px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.service h4 {
+  color: #0a2540;
+  margin-bottom: 0.5rem;
 }
 
 /* Form Section */
@@ -94,31 +109,16 @@ nav a {
   text-align: center;
 }
 
-.form-section form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.form-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.form-section input,
-.form-section select,
-.form-section textarea {
-  padding: 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-section button {
-  background: #0a2540;
-  color: white;
-  padding: 0.8rem;
-  font-weight: 600;
+.form-section iframe {
+  max-width: 100%;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 /* Footer */
@@ -128,9 +128,35 @@ footer {
   background: #f1f1f1;
   font-size: 0.9rem;
   color: #444;
+  margin-top: 2rem;
 }
 
 footer a {
   color: #0a2540;
   margin: 0 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.5rem;
+  }
 }
