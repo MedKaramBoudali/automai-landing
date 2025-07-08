@@ -1,12 +1,136 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
-  background: #f5f7fa;
+  box-sizing: border-box;
 }
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #0a2540;
+}
+
+/* Header */
 header {
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0a2540;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
   background: #0a2540;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 4rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  background: #ff7f50;
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+/* Services Section */
+.services {
+  padding: 3rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service {
+  background: #f1f5f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 260px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+/* Form Section */
+.form-section {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.form-section form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-section button {
+  background: #0a2540;
+  color: white;
+  padding: 0.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+footer a {
+  color: #0a2540;
+  margin: 0 0.5rem;
 }
