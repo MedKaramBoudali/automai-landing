@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AUTOMAI – Automation Made Easy</title>
+  <title>AutoOps – Automation Made Easy</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <!-- Header -->
   <header>
     <div class="container">
-      <h1 class="logo">AUTOMAI</h1>
+      <h1 class="logo">AutoOps</h1>
       <nav>
         <a href="#services">Services</a>
         <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
+        <a href="#form">Contact</a>
       </nav>
     </div>
   </header>
@@ -22,8 +23,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <h2>Automation Made Easy</h2>
-    <p>Automate your tasks with ease, for individuals and businesses.</p>
-    <a href="#form" class="cta">Get Started</a>
+    <p>Automate your tasks with ease — built for individuals and businesses.</p>
+    <a href="#form" class="cta">Request Automation</a>
   </section>
 
   <!-- Services Section -->
@@ -45,29 +46,36 @@
     </div>
   </section>
 
-  <!-- Request Form -->
+  <!-- Form Section (Tally Embed) -->
   <section class="form-section" id="form">
     <h3>Request Automation</h3>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <select name="client_type" required>
-        <option value="">Client Type</option>
-        <option value="individual">Individual</option>
-        <option value="company">Company</option>
-      </select>
-      <textarea name="message" placeholder="What do you want to automate?" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
+    <iframe data-tally-src="https://tally.so/r/mOZpj8?transparentBackground=1"
+            loading="lazy" width="100%" height="500" frameborder="0"
+            marginheight="0" marginwidth="0" title="AutoOps Request Form"></iframe>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 AUTOMAI. All rights reserved.</p>
+    <p>&copy; 2025 AutoOps. All rights reserved.</p>
     <div>
       <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
     </div>
   </footer>
+
+  <!-- Tally Embed Script -->
+  <script>
+    const d = document, w = "https://tally.so/widgets/embed.js", v = function () {
+      if (!d.querySelector(`script[src="${w}"]`)) {
+        let s = d.createElement("script");
+        s.src = w;
+        s.onload = function () {
+          Tally.loadEmbeds();
+        };
+        d.body.appendChild(s);
+      }
+    };
+    v();
+  </script>
 
   <script src="script.js"></script>
 </body>
