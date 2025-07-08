@@ -3,16 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AUTOMAI – AI Automation</title>
-  <link rel="stylesheet" href="style.css">
+  <title>AUTOMAI – Automation Made Easy</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <h1>Welcome to AUTOMAI</h1>
+    <div class="container">
+      <h1 class="logo">AUTOMAI</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <!-- Hero, Services, Form will go here -->
-  </main>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Automation Made Easy</h2>
+    <p>Automate your tasks with ease, for individuals and businesses.</p>
+    <a href="#form" class="cta">Get Started</a>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h3>What We Offer</h3>
+    <div class="service-list">
+      <div class="service">
+        <h4>Data Automation</h4>
+        <p>Scrape, process, and manage data efficiently.</p>
+      </div>
+      <div class="service">
+        <h4>Document Automation</h4>
+        <p>Automate document generation and delivery.</p>
+      </div>
+      <div class="service">
+        <h4>Email Automation</h4>
+        <p>Streamline your email workflows with smart triggers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Request Form -->
+  <section class="form-section" id="form">
+    <h3>Request Automation</h3>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="client_type" required>
+        <option value="">Client Type</option>
+        <option value="individual">Individual</option>
+        <option value="company">Company</option>
+      </select>
+      <textarea name="message" placeholder="What do you want to automate?" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 AUTOMAI. All rights reserved.</p>
+    <div>
+      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
