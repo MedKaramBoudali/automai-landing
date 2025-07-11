@@ -1,82 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AutoOps – Automation Made Easy</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoOps Studio | Automation Solutions</title>
+    <link rel="stylesheet" href="style.css">  
+    <script src="script.js"></script>          
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            <h1>AutoOps Studio</h1>
+            <p>AUTOMATION</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#pricing">Tiers</a></li>
+                <li><a href="#tools">Library</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1 class="logo">AutoOps</h1>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#form">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Automate your tasks with ease</h1>
+            <p>We create custom automation solutions to streamline your workflows and boost productivity.</p>
+            <a href="https://tally.so/r/mOZpj8" target="_blank" class="cta-button">Get Started</a>
+        </div>
+    </section>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Automation Made Easy</h2>
-    <p>Automate your tasks with ease — built for individuals and businesses.</p>
-    <a href="#form" class="cta">Request Automation</a>
-  </section>
+    <section id="pricing" class="pricing">
+        <h2>Pricing Tiers</h2>
+        <div class="tiers-container">
+            <div class="tier">
+                <h3>Basic</h3>
+                <p class="price">Free</p>
+                <p class="description">For individuals only</p>
+                <p class="features">Limited automations</p>
+                <a href="https://tally.so/r/mOZpj8" target="_blank" class="tier-button">Get Started</a>
+            </div>
+            <div class="tier">
+                <h3>Silver</h3>
+                <p class="price">$9.99<span>/Month</span></p>
+                <p class="description">For professionals</p>
+                <p class="features">Advanced automations</p>
+                <a href="https://tally.so/r/mOZpj8" target="_blank" class="tier-button">Subscribe</a>
+            </div>
+            <div class="tier">
+                <h3>Pro</h3>
+                <p class="price">$19.99<span>/Month</span></p>
+                <p class="description">For power users</p>
+                <p class="features">Extensive automations</p>
+                <a href="https://tally.so/r/mOZpj8" target="_blank" class="tier-button">Subscribe</a>
+            </div>
+            <div class="tier">
+                <h3>Company</h3>
+                <p class="price">Custom</p>
+                <p class="description">For businesses</p>
+                <p class="features">Enterprise solutions</p>
+                <a href="#contact" class="tier-button">Contact Us</a>
+            </div>
+        </div>
+        <div class="divider"></div>
+    </section>
 
-  <!-- Services Section -->
-  <section class="services" id="services">
-    <h3>What We Offer</h3>
-    <div class="service-list">
-      <div class="service">
-        <h4>Data Automation</h4>
-        <p>Scrape, process, and manage data efficiently.</p>
-      </div>
-      <div class="service">
-        <h4>Document Automation</h4>
-        <p>Automate document generation and delivery.</p>
-      </div>
-      <div class="service">
-        <h4>Email Automation</h4>
-        <p>Streamline your email workflows with smart triggers.</p>
-      </div>
-    </div>
-  </section>
+    <section id="tools" class="tools">
+        <h2>Tools & Technologies</h2>
+        <div class="tools-container">
+            <div class="tool">
+                <h3>AI</h3>
+                <div class="tool-icon"></></div>
+            </div>
+            <div class="tool">
+                <h3>RPA</h3>
+                <div class="tool-icon"></></div>
+            </div>
+            <div class="tool">
+                <h3>APIs</h3>
+                <div class="tool-icon"></></div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Form Section (Tally Embed) -->
-  <section class="form-section" id="form">
-    <h3>Request Automation</h3>
-    <iframe data-tally-src="https://tally.so/r/mOZpj8?transparentBackground=1"
-            loading="lazy" width="100%" height="500" frameborder="0"
-            marginheight="0" marginwidth="0" title="AutoOps Request Form"></iframe>
-  </section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>For startups and companies</h3>
+                <p>Contact us to specify your needs and get a custom offer tailored to your business requirements.</p>
+                <div class="contact-methods">
+                    <p>Email: <span id="email-placeholder">info@autoopsstudio.com</span></p>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 AutoOps. All rights reserved.</p>
-    <div>
-      <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
-    </div>
-  </footer>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 AutoOps Studio. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 
-  <!-- Tally Embed Script -->
-  <script>
-    const d = document, w = "https://tally.so/widgets/embed.js", v = function () {
-      if (!d.querySelector(`script[src="${w}"]`)) {
-        let s = d.createElement("script");
-        s.src = w;
-        s.onload = function () {
-          Tally.loadEmbeds();
-        };
-        d.body.appendChild(s);
-      }
-    };
-    v();
-  </script>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
