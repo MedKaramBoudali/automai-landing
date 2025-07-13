@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoOps Studio | Automation Solutions</title>
-    <link rel="stylesheet" href="style.css">  
-    <script src="script.js"></script>          
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +49,8 @@
                 <p class="features">Advanced automations</p>
                 <a href="https://tally.so/r/mOZpj8" target="_blank" class="tier-button">Subscribe</a>
             </div>
-            <div class="tier">
+            <div class="tier recommended">
+                <div class="recommended-badge">Popular</div>
                 <h3>Pro</h3>
                 <p class="price">$19.99<span>/Month</span></p>
                 <p class="description">For power users</p>
@@ -58,7 +58,7 @@
                 <a href="https://tally.so/r/mOZpj8" target="_blank" class="tier-button">Subscribe</a>
             </div>
             <div class="tier">
-                <h3>Company</h3>
+                <h3>Enterprise</h3>
                 <p class="price">Custom</p>
                 <p class="description">For businesses</p>
                 <p class="features">Enterprise solutions</p>
@@ -83,6 +83,10 @@
                 <h3>APIs</h3>
                 <div class="tool-icon"></></div>
             </div>
+            <div class="tool">
+                <h3>Cloud</h3>
+                <div class="tool-icon"></></div>
+            </div>
         </div>
     </section>
 
@@ -96,7 +100,7 @@
                     <p>Email: <span id="email-placeholder">info@autoopsstudio.com</span></p>
                 </div>
             </div>
-            <form id="contact-form" class="contact-form">
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
