@@ -90,12 +90,14 @@ nav ul li a:hover {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #333;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .hero p {
     font-size: 1.2rem;
     color: #666;
     margin-bottom: 30px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .cta-button {
@@ -105,11 +107,13 @@ nav ul li a:hover {
     color: white;
     border-radius: 4px;
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
+    animation: fadeIn 2s ease-in-out, pulse 2s infinite;
 }
 
 .cta-button:hover {
     background-color: #0052a3;
+    transform: translateY(-2px);
 }
 
 /* Pricing Section */
@@ -142,6 +146,29 @@ nav ul li a:hover {
     background-color: #f8f9fa;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.tier:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tier.recommended {
+    border: 2px solid #0066cc;
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: #0066cc;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 .tier h3 {
@@ -226,6 +253,11 @@ nav ul li a:hover {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     min-width: 150px;
+    transition: all 0.3s;
+}
+
+.tool:hover {
+    transform: scale(1.05);
 }
 
 .tool h3 {
@@ -368,6 +400,29 @@ nav ul li a:hover {
     color: #0052a3;
 }
 
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header {
@@ -391,9 +446,7 @@ nav ul li a:hover {
         min-width: 100%;
         max-width: 100%;
     }
-}
 
-@media (max-width: 480px) {
     .hero h1 {
         font-size: 2rem;
     }
@@ -406,5 +459,16 @@ nav ul li a:hover {
     .tools h2,
     .contact h2 {
         font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tool {
+        width: 100%;
     }
 }
